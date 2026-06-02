@@ -15,16 +15,37 @@ body {
   justify-content: center;
   align-items: center;
 }
-a {
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+}
+nav a {
+  color: #7eb8e0;
+  text-decoration: none;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  transition: color 0.2s;
+}
+nav a:hover { color: #b3d4f0; }
+a.main {
   color: #7eb8e0;
   text-decoration: none;
   font-size: clamp(1.2rem, 4vw, 2rem);
   transition: color 0.2s;
 }
-a:hover { color: #b3d4f0; }
+a.main:hover { color: #b3d4f0; }
 </style>
 </head>
 <body>
-<a href="mailto:h@cker.md">sumbru</a>
+<nav>
+<a href="about.html">About</a>
+<a href="https://hackerone.com/sumbru" target="_blank" rel="noopener noreferrer">HackerOne</a>
+</nav>
+<a class="main" href="mailto:h@cker.md">sumbru</a>
 </body>
 </html>
