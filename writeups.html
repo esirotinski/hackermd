@@ -40,11 +40,7 @@ main {
 </style>
 </head>
 <body>
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="https://hackerone.com/sumbru" target="_blank" rel="noopener noreferrer">HackerOne</a>
-</nav>
 <main>Coming soon...</main>
+<script>fetch('nav.html').then(r=>r.text()).then(h=>{var e=document.createElement('div');e.innerHTML=h;document.body.insertBefore(e,document.body.firstChild)})</script>
 </body>
 </html>
