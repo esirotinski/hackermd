@@ -11,9 +11,6 @@ body {
   background: #0d0d0d;
   color: #e0e0e0;
   font-family: system-ui, -apple-system, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 nav {
   position: fixed;
@@ -34,13 +31,45 @@ nav a {
 }
 nav a:hover { color: #b3d4f0; }
 main {
-  font-size: clamp(1.2rem, 4vw, 2rem);
+  max-width: 700px;
+  margin: 6rem auto 3rem;
+  padding: 0 1.5rem;
+}
+h1 {
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  margin-bottom: 1rem;
+}
+ul li a {
   color: #7eb8e0;
+  text-decoration: none;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  transition: color 0.2s;
+}
+ul li a:hover { color: #b3d4f0; }
+.meta {
+  color: #999;
+  font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+  margin-top: 0.3rem;
 }
 </style>
 </head>
 <body>
-<main>Coming soon...</main>
-<script src="js/nav.js"></script>
+<main>
+<h1>Writeups</h1>
+<ul>
+<li>
+<a href="how-i-got-3-bounties-for-the-same-bug.html">How I got paid 3 times for the same bug</a>
+<p class="meta">Published: 07.06.2026</p>
+</li>
+</ul>
+</main>
+<script src="../js/nav.js"></script>
 </body>
 </html>

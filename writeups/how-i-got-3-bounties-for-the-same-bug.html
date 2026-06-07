@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How I got paid 3 times for the same bug</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  background: #0d0d0d;
+  color: #e0e0e0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  background: #0d0d0d;
+}
+nav a {
+  color: #7eb8e0;
+  text-decoration: none;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  transition: color 0.2s;
+}
+nav a:hover { color: #b3d4f0; }
+main {
+  max-width: 700px;
+  margin: 6rem auto 3rem;
+  padding: 0 1.5rem;
+}
+h1 {
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  margin-bottom: 0.5rem;
+  color: #e0e0e0;
+}
+.meta {
+  color: #999;
+  font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+  margin-bottom: 2rem;
+}
+.content {
+  line-height: 1.8;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+.content p {
+  margin-bottom: 1.2rem;
+}
+.content a {
+  color: #7eb8e0;
+  text-decoration: none;
+}
+.content a:hover { color: #b3d4f0; }
+.content code {
+  background: #1a1a1a;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+</style>
+</head>
+<body>
+<main>
+<h1>How I got paid 3 times for the same bug</h1>
+<p class="meta">Published: 07.06.2026</p>
+<div class="content">
+<p>I've been hacking on a private program and during recon I found out that it's main application uses Backendless, a full-stack, visual app development platform and Backend-as-a-Service (BaaS). It provides developers and non-developers with the tools to build, deploy, and manage the frontend, backend, and database of web and mobile applications without writing traditional code. The front pages of Backendless were requesting API endpoints which are documented here <a href="https://backendless.com/docs/rest/index.html" target="_blank" rel="noopener noreferrer">https://backendless.com/docs/rest/index.html</a></p>
+<p>I started checking every endpoint, trying to get something interesting worth reporting. Almost at the bottom of documentation there is a section regarding Caching API. At the time I was hacking, there was an endpoint to retrieve data from cache, <code>https://xxxx.backendless.app/api/cache</code>, and in case of my program it was responding with their customers PII, lots of details. I reported the vulnerability, it was accepted, fixed and I received a reward. Actually my first reward.</p>
+<p>Later, I've been thinking, what if the vulnerability is back after some system update or config restore, or something else. I decided to write a Python script to be run daily, and if there is a HTTP 200 with PII, send me a notification by email. And it worked, twice, reported every time when I received an email and got my 2 more bounties.</p>
+<p>Today, this <code>/api/cache</code> endpoint was removed, you cannot get all the cache, you can retrieve a part of it by &lt;key&gt;.</p>
+</div>
+</main>
+<script src="../js/nav.js"></script>
+</body>
+</html>
