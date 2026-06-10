@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>These days still happens to register and use a service without email confirmation</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  background: #0d0d0d;
+  color: #e0e0e0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  background: #0d0d0d;
+}
+nav a {
+  color: #7eb8e0;
+  text-decoration: none;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  transition: color 0.2s;
+}
+nav a:hover { color: #b3d4f0; }
+main {
+  max-width: 700px;
+  margin: 6rem auto 3rem;
+  padding: 0 1.5rem;
+}
+h1 {
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  margin-bottom: 0.5rem;
+  color: #e0e0e0;
+}
+.meta {
+  color: #999;
+  font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+  margin-bottom: 2rem;
+}
+.content {
+  line-height: 1.8;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+.content p {
+  margin-bottom: 1.2rem;
+}
+.content a {
+  color: #7eb8e0;
+  text-decoration: none;
+}
+.content a:hover { color: #b3d4f0; }
+.content code {
+  background: #1a1a1a;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+.content ul {
+  margin: 1rem 0 1.2rem 1.5rem;
+}
+.content ul li {
+  margin-bottom: 0.8rem;
+  color: #bbb;
+}
+</style>
+</head>
+<body>
+<main>
+<h1>These days still happens to register and use a service without email confirmation</h1>
+<p class="meta">Published: 10.06.2026</p>
+<div class="content">
+<p>Been awarded with another bounty for getting a list of company employees using an LMS for learning and trainings.</p>
+<p>The LMS allowed registering users with specific domain emails, company owned domain. So I decided to register with <code>sumbru@&lt;company&gt;.com</code>. Right after registration I was able to login to LMS and list all of the trainings, learning points, certificates and the Leaderboard. The Leaderboard was a list of employees with their usernames, emails and some other details. I reported this finding. The issue was fixed, now you have to confirm email accessing a link sent to the same email in order to finish registration.</p>
+<p>The impact of this finding is that:</p>
+<ul>
+<li>Malicious actors can create highly personalized phishing or social engineering campaigns by targeting specific employees identified through their email address.</li>
+<li>Having a valid email or username makes brute-force password attacks more efficient, as attackers only need to focus on guessing valid passwords for existent users.</li>
+<li>Knowing which user email exists is a crucial step for attackers seeking to gain access to user or employee accounts within the system(s).</li>
+</ul>
+</div>
+</main>
+<script src="../js/nav.js"></script>
+</body>
+</html>
