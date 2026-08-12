@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FRWPVF8Y1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FRWPVF8Y1B');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why user enumeration is often out of scope in bug bounty programs</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  background: #0d0d0d;
+  color: #e0e0e0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  background: #0d0d0d;
+}
+nav a {
+  color: #7eb8e0;
+  text-decoration: none;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  transition: color 0.2s;
+}
+nav a:hover { color: #b3d4f0; }
+main {
+  max-width: 700px;
+  margin: 6rem auto 3rem;
+  padding: 0 1.5rem;
+}
+h1 {
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  margin-bottom: 0.5rem;
+  color: #e0e0e0;
+}
+.meta {
+  color: #999;
+  font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+  margin-bottom: 2rem;
+}
+.content {
+  line-height: 1.8;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+.content p {
+  margin-bottom: 1.2rem;
+}
+.content a {
+  color: #7eb8e0;
+  text-decoration: none;
+}
+.content a:hover { color: #b3d4f0; }
+.content code {
+  background: #1a1a1a;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+.content ul {
+  margin: 1rem 0 1.2rem 1.5rem;
+}
+.content ul li {
+  margin-bottom: 0.8rem;
+  color: #bbb;
+}
+</style>
+</head>
+<body>
+<main>
+<h1>Why user enumeration is often out of scope in bug bounty programs?</h1>
+<p class="meta">Published: 12.08.2026</p>
+<div class="content">
+<p>As of me - bad design, security treated as an afterthought, negligence. Companies would not pay a bounty and fix an issue that requires redesign or refactoring.</p>
+<p>I asked Gemini the same question and this is the answer:</p>
+<p><em>User enumeration is often out of scope in bug bounty programs because it generates low-value noise, clogs system logs, and risks user privacy or performance issues without proving a severe security flaw.</em></p>
+<p><em><strong>Why It Is Out of Scope</strong></em></p>
+<ul>
+<li><em><strong>High System Noise:</strong> Automated checks send many requests and fill server logs.</em></li>
+<li><em><strong>Low Security Impact:</strong> It rarely leads to direct system compromise on its own.</em></li>
+<li><em><strong>Privacy and Compliance Risk:</strong> Testing account lists can touch real user data.</em></li>
+<li><em><strong>Denial of Service Risk:</strong> Rapid lookup requests can slow down or crash the login page.</em></li>
+</ul>
+<p>As an ethical hacker I understand these concerns, but companies are trying to protect their assets from malicious actors, right? Why would a malicious actor care about these?</p>
+</div>
+</main>
+<script src="../js/nav.js"></script>
+</body>
+</html>
